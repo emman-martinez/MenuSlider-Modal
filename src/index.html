@@ -4,15 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Slider & Modal</title>
+    <title>My Landing Page</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head> 
 
 <body>
+    <!-- ****************************** NAVEGACIÓN ****************************** -->
+    <nav>
 
-    <h1>Menú Slider & Modal</h1>
+        <div class="logo">
+            <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="user">
+        </div>
+        <ul>
+            <li><a href="#">Home</a> </li>
+            <li><a href="#">Portafolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Me</a></li>
+        </ul>
 
-    
+    </nav>
+    <!-- ****************************** HEADER ****************************** -->
+    <header>
+
+        <div class="circle">
+            <button id="toggle" class="toggle">
+                <i class="fa fa-bars fa-2x"></i>
+            </button>
+        </div>
+        <h1>My Landing Page</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, corrupti.</p>
+        <button class="cta-btn" id="open">Sign Up</button>
+
+    </header>
+    <!-- ****************************** CONTAINER ****************************** -->
+    <div class="container">
+
+        <h2>What is this landing page about?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus unde amet quisquam voluptates quae reprehenderit iure esse at, neque facere beatae laboriosam nulla earum provident asperiores, quidem ad cupiditate sint.
+        Ipsam dolorum corporis dolorem voluptatibus accusamus eius commodi repellendus atque nisi similique illum porro accusantium dolor dicta iure, distinctio ratione odit, fuga, iste labore debitis nihil exercitationem. Id, aut temporibus!
+        Consequuntur, nihil natus nostrum sint magni hic pariatur! Facere ipsum sequi debitis modi? Alias illo, ullam iure nesciunt pariatur ratione totam dolore necessitatibus neque tempora quas soluta accusantium repudiandae fugit.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt repudiandae, fugit earum iste quo iure error in. Natus in, deleniti voluptatem alias ipsam sapiente corrupti facilis delectus magni veniam sed.</p>
+
+        <h2>Tell Me More</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta perferendis quod eaque, magnam sequi nemo? Adipisci facilis amet alias aliquam quis iure. Dignissimos dicta facere aspernatur officia tempore sunt assumenda!Corrupti qui, similique architecto illum quo at obcaecati exercitationem. Dignissimos ipsam dicta exercitationem alias? Natus placeat ipsum in nobis atque veritatis tenetur consequatur quidem iste. Perferendis nisi mollitia maxime culpa.</p>
+
+        <h2>Benefits</h2>
+        <ul>
+            <li>Lifetime Access</li>
+            <li>30 Day Money Back</li>
+            <li>Tailored Customer Support</li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusamus ipsa quae autem enim inventore tenetur voluptatem aut ut, facere laboriosam? Veniam doloribus accusamus quibusdam asperiores facere odit culpa quasi!
+        Magni consectetur harum nostrum natus fugit repellendus ab quo perspiciatis, maxime nemo animi mollitia nobis ipsa aliquam nam dolorem dolores inventore cum maiores quas! Nihil molestiae minus velit consequatur eveniet.
+        Et, voluptate minus provident sed suscipit cupiditate corporis, accusantium fugiat tenetur doloribus laboriosam, voluptatibus officia quia sequi iusto maiores. Voluptas vel, vitae architecto doloribus omnis dolorum ullam ducimus aut ex?</p>
+
+    </div>
+    <!-- ****************************** MODAL ****************************** -->
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <div class="circle">
+                <button class="close-btn" id="close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-header">
+                <h3>Sing Up</h3>
+            </div>
+            <div class="modal-content">
+                <p>Register with us to get offers, support an more</p>
+                <form class="modal-form">
+                    <div class="form-control">
+                        <label for="name">Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            placeholder="Enter Name"
+                        />
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="Enter Email"
+                        />
+                    </div>
+                    <div class="form-control">
+                        <label for="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            placeholder="Enter Password"
+                        >
+                    </div>
+                    <div class="form-control">
+                        <label for="password2">Confirm Password</label>
+                        <input 
+                            type="password" 
+                            id="password2" 
+                            placeholder="Confirm Password"
+                        />
+                    </div>
+                    <input type="submit" value="Submit" class="submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
 
 </body>
 

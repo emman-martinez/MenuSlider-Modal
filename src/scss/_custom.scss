@@ -1,3 +1,12 @@
+body {
+    transition: transform 0.3s ease;
+}
+
+body.show-nav {
+    /* Width of nav */
+    transform: translateX(200px);
+}
+
 nav {
     background-color: $primario;
     border-right: 2px solid rgba(200, 200, 200, 0.1);
@@ -100,4 +109,119 @@ button {
     margin: 0 auto;
     max-width: 100%;
     width: 800px;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .modal {
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        width: 400px;
+        .close-btn {
+            background: transparent;
+            border: none;
+            font-size: 25px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .modal-header {
+            background: $primario;
+            color: #FFFFFF;
+            padding: 15px;
+            h3 {
+                margin: 0;
+                border-bottom: 1px solid #333;
+            }
+        }
+        .modal-content {
+            padding: 20px;
+            .modal-form {
+                div {
+                    margin: 15px 0;
+                }
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+                .form-input {
+                    padding: 8px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.modal-container.show-modal {
+    display: block;
+}
+
+.modal {
+    animation-name: modalopen;
+    animation-duration: $modal-duration;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+    label {
+        color: #777;
+        display: block;
+        margin-bottom: 5px;
+    }
+    input {
+        border: 2px solid #F0F0F0;
+        border-radius: 4px;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        &:focus {
+            outline: 0;
+            border-color: #777;
+        }
+    }
+    small {
+        color: #E74C3C;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+    }
+}
+
+.form-control.success input {
+    border-color: #2ECC71;
+}
+
+.form-control.error input {
+    border-color: $secundario;
+}
+
+.form-control.error small {
+    visibility: visible;
 }
